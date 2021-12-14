@@ -11,6 +11,7 @@ jobs:
     - name: Check out this repo
       uses: actions/checkout@v2
     - name: Fetch latest data
+      timeout-minutes: 3
       run: |-
         bin/scrape
     - name: Commit and push if it changed
